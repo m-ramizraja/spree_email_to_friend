@@ -13,7 +13,10 @@ sl:
       send_message: "Povej prijatelju!"
       mail_sent_to: "Sporočilo poslano na %{email} "
       send_to_other: "Pošlji novemu prijatelju"
-      you_would_like_this: "%{sender_name} ti pošilja zanimivost s strani %{site}"
+      sender_subject: "%{sender_name} ti pošilja zanimivost s strani %{site}"
+      you_would_like_this_item: "I think you would like this item:"
+      click_link_to_view: "Click the link below to view the %{name} page."
+      visit_page: "For more online shopping, visit %{url}"
     captcha:
       captcha_settings: "CAPTCHA nastavitve"
       public_key: "Javni ključ"
@@ -21,3 +24,6 @@ sl:
       manage_keys: "Uredi svoje (re)captcha ključe"
       use_captcha: "Uporabi CAPTCHA zaščito?"
       theme: "Tema"
+    validation:
+      recipients: "must contain at least one valid email address"
+      invalid_recipients: "must be removed"

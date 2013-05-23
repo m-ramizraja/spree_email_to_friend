@@ -13,7 +13,10 @@ de:
       send_message: "Diesen Artikel per E-Mail empfehlen!"
       mail_sent_to: "Email wurde an %{email} verschickt "
       send_to_other: "Jemanden anders empfehlen"
-      you_would_like_this: "Ich glaube das könnte dir gefallen"
+      sender_subject: "Ich glaube das könnte dir gefallen"
+      you_would_like_this_item: "Ich glaube das könnte dir gefallen:"
+      click_link_to_view: "Click the link below to view the %{name} page."
+      visit_page: "For more online shopping, visit %{url}"
     captcha:
       captcha_settings: "Captcha Einstellungen"
       public_key: "Öffentlichter Schlüssel (Public key)"
@@ -21,3 +24,6 @@ de:
       manage_keys: "Ihre (re)captcha Schlüssel verwalten"
       use_captcha: "Use Captcha?"
       theme: "Theme"
+    validation:
+      recipients: "must contain at least one valid email address"
+      invalid_recipients: "must be removed"

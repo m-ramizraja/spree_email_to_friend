@@ -9,13 +9,13 @@ class Spree::MailToFriend
   validates :sender_name, presence: true
   validates :recipient_name, presence: true, unless: :is_multi
   validates :sender_email, format: { with: EMAILREGEX }
-  validates :recipients, length: {minimum: 1, message: 'must contain at least one valid email address'}
-  validates :invalid_recipients, length: {maximum: 0, message: 'must be removed'}
+  validates :recipients, length: { minimum: 1, message: Spree.t('validation.recipients') }
+  validates :invalid_recipients, length: { maximum: 0, message: Spree.t('validation.invalid_recipients') }
 
   def initialize(opts = {})
     @sender_email = opts[:sender_email] || ' '
     @sender_name  = opts[:sender_name]  || @sender_email.split('@', 2)[0].titleize
-    @subject      = opts[:subject]      || Spree.t('email_to_friend.you_would_like_this', sender_name: @sender_name, site: Spree::Config[:site_url])
+    @subject      = opts[:subject]      || Spree.t('email_to_friend.sender_subject', sender_name: @sender_name, site: Spree::Config[:site_url])
 
     @recipients = []
     @invalid_recipients = []

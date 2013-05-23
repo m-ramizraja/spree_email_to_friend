@@ -1,6 +1,6 @@
 <%= mail.recipient_name %>,
 
-I think you would like this item:
+<%= Spree.t('email_to_friend.you_would_like_this_item') %>
 
   * <%= product.name %>
 
@@ -10,7 +10,7 @@ I think you would like this item:
 
 <%= mail.sender_name %>
 
-Click the link below to view the <%= product.name %> page.
+<%= Spree.t('email_to_friend.click_link_to_view', name: product.name) %>
 <%= spree.product_url(product) %>
 
-For more online shopping, visit <%= spree.products_url %>
+<%= Spree.t('email_to_friend.visit_page', url: spree.products_url) %>
