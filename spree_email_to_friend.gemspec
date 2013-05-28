@@ -18,11 +18,10 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  spree_version  = '~> 2.0.0.beta'
+  spree_version  = '~> 2.1.0.beta'
   s.add_dependency 'spree_core', spree_version
   s.add_dependency 'spree_backend', spree_version
   s.add_dependency 'spree_api', spree_version
-  s.add_dependency 'recaptcha', '>= 0.3.1'
 
   s.add_development_dependency 'i18n', '~> 0.6.1'
   s.add_development_dependency 'rails-i18n', '~> 0.7.3'
