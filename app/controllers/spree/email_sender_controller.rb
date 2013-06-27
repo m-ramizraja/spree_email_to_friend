@@ -1,5 +1,4 @@
 class Spree::EmailSenderController < Spree::BaseController
-
   include Spree::Core::ControllerHelpers::Order
 
   before_filter :find_object
@@ -12,7 +11,7 @@ class Spree::EmailSenderController < Spree::BaseController
     end
   end
 
-private
+  private
 
   def mail_to_friend
     @mail_to_friend = Spree::MailToFriend.new(params[:mail_to_friend])
