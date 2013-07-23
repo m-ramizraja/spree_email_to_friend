@@ -11,13 +11,13 @@ describe Spree::MailToFriend do
 
   context "Validate required fields" do
 
-  let(:mail_data) { FactoryGirl.build(:valid_email) }
+    let(:mail_data) { FactoryGirl.build(:valid_email) }
 
-  it "should verify test data hase been generated" do
+    it "should verify test data hase been generated" do
 
-    mail_data.should be_valid
+      mail_data.should be_valid
 
-  end
+    end
 
   end
 
@@ -26,7 +26,7 @@ describe Spree::MailToFriend do
     let(:mail_data) { FactoryGirl.build(:valid_email, invalid_recipients: 'invaild',  recipient_email:'ryan@spreecommerce.com, xyx') }
 
     it "should check Email format with REGEX" do
-       mail_data.should_not be_valid
+      mail_data.should_not be_valid
     end
 
     it "persist function should return false " do

@@ -2,8 +2,8 @@ if ENV['COVERAGE']
   require 'simplecov'
   require 'coveralls'
   SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-    SimpleCov::Formatter::HTMLFormatter,
-    Coveralls::SimpleCov::Formatter
+      SimpleCov::Formatter::HTMLFormatter,
+      Coveralls::SimpleCov::Formatter
   ]
   SimpleCov.start do
     add_filter '/spec/'
@@ -17,7 +17,7 @@ end
 
 ENV['RAILS_ENV'] = 'test'
 
-require File.expand_path('../dummy/config/environment.rb',  __FILE__)
+require File.expand_path('../dummy/config/environment.rb', __FILE__)
 
 require 'rspec/rails'
 require 'i18n-spec'
